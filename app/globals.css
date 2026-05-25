@@ -8,7 +8,6 @@
 
 html {
   @apply scroll-smooth;
-  color-scheme: dark;
 }
 
 body {
@@ -18,66 +17,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #030712;
-  color: #f3f4f6;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  @apply w-2;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-dark-900;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-dark-700 rounded hover:bg-dark-600;
-}
-
-/* Glass effect */
 .glass {
   @apply bg-dark-800/40 backdrop-blur-md border border-dark-700/50 rounded-xl;
 }
 
 .glass-hover {
-  @apply glass hover:bg-dark-800/60 transition-all duration-300 cursor-pointer;
+  @apply glass hover:bg-dark-800/60 transition-all duration-300;
 }
 
-/* Gradient text */
 .gradient-text {
   @apply bg-gradient-to-r from-crypto-primary via-crypto-secondary to-crypto-primary bg-clip-text text-transparent;
 }
 
-/* Buttons */
 .btn-primary {
-  @apply px-4 py-2 rounded-lg bg-crypto-primary hover:bg-crypto-primary/90 text-white font-semibold transition-all duration-200 active:scale-95;
+  @apply px-4 py-2 rounded-lg bg-crypto-primary hover:bg-crypto-primary/90 text-white font-semibold transition-colors duration-200;
 }
 
 .btn-secondary {
-  @apply px-4 py-2 rounded-lg bg-dark-700 hover:bg-dark-600 text-dark-100 font-semibold transition-all duration-200 active:scale-95;
+  @apply px-4 py-2 rounded-lg bg-dark-700 hover:bg-dark-600 text-dark-100 font-semibold transition-colors duration-200;
 }
 
-.btn-primary:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-.btn-secondary:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Cards */
 .card {
-  @apply glass rounded-xl p-6 shadow-lg;
+  @apply glass rounded-xl p-6;
 }
 
-.card-hover {
-  @apply card hover:shadow-xl hover:border-dark-600 transition-all duration-300;
-}
-
-/* Badges */
 .badge {
-  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
 }
 
 .badge-success {
@@ -93,100 +60,5 @@ body {
 }
 
 .badge-info {
-  @apply badge bg-crypto-primary/20 text-crypto-primary;
-}
-
-/* Tables */
-table {
-  @apply w-full;
-}
-
-thead {
-  @apply border-b border-dark-700;
-}
-
-th {
-  @apply px-4 py-3 text-left text-sm font-semibold text-dark-400 uppercase tracking-wider;
-}
-
-td {
-  @apply px-4 py-3 text-sm;
-}
-
-tbody tr {
-  @apply border-b border-dark-700/50 hover:bg-dark-800/50 transition-colors;
-}
-
-/* Forms */
-input,
-textarea,
-select {
-  @apply bg-dark-900 border border-dark-700 rounded-lg px-4 py-2 text-dark-100 placeholder-dark-500 focus:outline-none focus:border-crypto-primary focus:ring-1 focus:ring-crypto-primary transition-all;
-}
-
-input:disabled,
-textarea:disabled,
-select:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Links */
-a {
-  @apply text-crypto-primary hover:text-crypto-primary/80 transition-colors;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.3s ease-out;
-}
-
-/* Utility classes */
-.text-gradient {
-  @apply bg-gradient-to-r from-crypto-primary to-crypto-secondary bg-clip-text text-transparent;
-}
-
-.shadow-glow {
-  @apply shadow-lg shadow-crypto-primary/20;
-}
-
-.border-glow {
-  @apply border border-crypto-primary/50;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card {
-    @apply p-4;
-  }
-
-  th,
-  td {
-    @apply px-2 py-2 text-xs;
-  }
+  @apply badge bg-crypto-info/20 text-crypto-info;
 }
